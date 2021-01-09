@@ -40,9 +40,7 @@ jobs:
       - name: Deploy app
         run: | 
           sudo chown -R $USER /home/runner/work/MyLife/
-          node --version
-          npm --version
-          yarn install
-          yarn run deploy
+          git config --global user.name "HITESHGOEL08"
+          yarn run deploy-workflow
         with:
           github_token: b47f0e61e1e05b7f67d23f116d790187fafa2a57
