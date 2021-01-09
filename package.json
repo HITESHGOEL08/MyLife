@@ -29,6 +29,7 @@
     "build-js": "react-scripts build",
     "test": "react-scripts test -u",
     "deploy": "npm-run-all -p build && gh-pages -d build",
+    "deploy-workflow": "yarn install && npm-run-all -p build && gh-pages -d build",
     "eject": "react-scripts eject",
     "test:watch": "test --watch",
     "test:coverage": "react-scripts test --coverage --runInBand --watchAll=false",
