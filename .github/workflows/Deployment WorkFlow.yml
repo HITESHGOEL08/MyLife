@@ -24,6 +24,9 @@ jobs:
         env: 
           CI: true
           persist-credentials: false
+          ACCESSTOKEN:  ${{ secrets.ACCESSTOKEN }}
+          AccessToken:  ${{ secrets.AccessToken }}
+          accesstoken:  ${{ secrets.accesstoken }}
                
       - name: Setup Node
         uses: actions/setup-node@v1
@@ -31,11 +34,12 @@ jobs:
           node-version: '12.x'  
       
       - name: Give Edit Permissions
+        shell: bash
         run: | 
           sudo chown -R $USER /home/runner/work/MyLife/
-          echo ${{ secrets.ACCESSTOKEN }}
-          echo ${{ secrets.AccessToken }}
-          echo ${{ secrets.accesstoken }}
+          echo "$ACCESSTOKEN"
+          echo "$AccessToken"
+          echo "$accesstoken"
           
       - name: Install Dependencies
         run: | 
