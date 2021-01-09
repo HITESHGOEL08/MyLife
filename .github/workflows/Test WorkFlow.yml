@@ -43,4 +43,4 @@ jobs:
           node-version: '10.x'  
       
       - name: use bat file
-        run: app-deploy-develop.bat
+        run: @echo app-deploy-develop
