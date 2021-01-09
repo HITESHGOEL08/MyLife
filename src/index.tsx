@@ -1,12 +1,23 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
-import App from './screens/mainApp/App';
+import { googleAnalyticsService } from './services/googleAnalyticsService';
+import { Provider } from "react-redux"
+import { Routes } from './routes/Routes';
+import { configureStore } from './redux/configureStore';
+
+googleAnalyticsService.initGA()
+
+const store = configureStore()
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+
+    <Provider store={store}>
+      <Routes />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
