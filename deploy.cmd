@@ -1,7 +1,7 @@
 @echo off
 setlocal
-git status
 git checkout develop
 git pull
+yarn install
 yarn run deploy
 endlocal
