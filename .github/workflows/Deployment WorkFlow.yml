@@ -52,7 +52,7 @@ jobs:
       - name: Deploy 
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          GITHUB_TOKEN: b47f0e61e1e05b7f67d23f116d790187fafa2a57
+          GITHUB_TOKEN: ${{ secrets.ACCESSTOKEN }} # b47f0e61e1e05b7f67d23f116d790187fafa2a57
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
           CLEAN: true
