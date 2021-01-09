@@ -36,10 +36,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '10.x'  
+          node-version: 'latest'  
       
       - name: use bat file
         run: | 
           node --version
           npm --version
-          echo app-deploy-develop
+          ./app-deploy-develop.bat
