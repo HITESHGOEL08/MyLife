@@ -36,5 +36,5 @@ jobs:
           sudo chown -R $USER /home/runner/work/MyLife/
           node --version
           npm --version
-          npm install
-          npm run deploy
+          yarn install
+          yarn run deploy
