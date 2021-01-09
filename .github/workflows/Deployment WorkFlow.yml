@@ -24,9 +24,6 @@ jobs:
         env: 
           CI: true
           persist-credentials: false
-          ACCESSTOKEN:  ${{ secrets.ACCESSTOKEN }}
-          AccessToken1:  ${{ secrets.AccessToken }}
-          accesstoken2:  ${{ secrets.accesstoken }}
                
       - name: Setup Node
         uses: actions/setup-node@v1
@@ -37,10 +34,7 @@ jobs:
         shell: bash
         run: | 
           sudo chown -R $USER /home/runner/work/MyLife/
-          echo "$ACCESSTOKEN"
-          echo "$AccessToken1"
-          echo "$accesstoken2"
-          
+            
       - name: Install Dependencies
         run: | 
           yarn install
@@ -52,7 +46,7 @@ jobs:
       - name: Deploy 
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          GITHUB_TOKEN: ${{ secrets.ACCESSTOKEN }} # b47f0e61e1e05b7f67d23f116d790187fafa2a57
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
           CLEAN: true
