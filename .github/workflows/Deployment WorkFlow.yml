@@ -26,9 +26,15 @@ jobs:
           CI: true
           persist-credentials: false
       
+      - name: GitHub Action for committing changes to a repository
+        uses: devops-infra/action-commit-push@0.1
+        with:
+          # Personal Access Token for GitHub for pushing the code
+          github_token: b47f0e61e1e05b7f67d23f116d790187fafa2a57
+
       - name: Give Access
         run: |
-          git config user.name 'Hitesh Goel'
+          git config user.name 'HITESHGOEL08'
           git config user.email 'hiteshgoel426@gmail.com'
           
       - name: Setup Node
