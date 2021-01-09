@@ -32,7 +32,7 @@ jobs:
         with:
           node-version: '12.x'  
       
-      - name: Deploy app
+      - name: Install Dependencies and Build App
         run: | 
           sudo chown -R $USER /home/runner/work/MyLife/
           yarn install
