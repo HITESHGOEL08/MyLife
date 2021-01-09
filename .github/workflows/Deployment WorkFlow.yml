@@ -30,11 +30,17 @@ jobs:
         with:
           node-version: '12.x'  
       
-      - name: Install Dependencies and Build App
+      - name: Give Edit Permissions
         run: | 
           sudo chown -R $USER /home/runner/work/MyLife/
           echo ${{ secrets.ACCESSTOKEN }}
+          
+      - name: Install Dependencies
+        run: | 
           yarn install
+      
+      - name: Build App
+        run: | 
           yarn build
       
       - name: Deploy 
