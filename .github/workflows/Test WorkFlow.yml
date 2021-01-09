@@ -6,13 +6,9 @@ name: Deployement WorkFlow
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: 
-    - master 
-    - develop  
+    branches: [ master, develop ]
   pull_request:
-    branches: 
-    - master 
-    - develop
+    branches: [ master, develop ]
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -43,4 +39,6 @@ jobs:
           node-version: '10.x'  
       
       - name: use bat file
+        run: node --version
+        run: npm --version
         run: @echo app-deploy-develop
