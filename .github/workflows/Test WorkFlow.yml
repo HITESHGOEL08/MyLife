@@ -36,10 +36,15 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 'node@latest'  
+          node-version: '12.x'  
       
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
+
       - name: use bat file
         run: | 
           node --version
           npm --version
+          deploy-develop
           ./app-deploy-develop.bat
