@@ -41,4 +41,4 @@ jobs:
       - name: use bat file
         run: node --version
         run: npm --version
-        run: @echo app-deploy-develop
+        run: echo app-deploy-develop
