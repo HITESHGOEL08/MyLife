@@ -33,6 +33,7 @@ jobs:
       - name: Install Dependencies and Build App
         run: | 
           sudo chown -R $USER /home/runner/work/MyLife/
+          echo ${{ secrets.ACCESSTOKEN }}
           yarn install
           yarn build
       
