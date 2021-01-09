@@ -25,8 +25,8 @@ jobs:
           CI: true
           persist-credentials: false
           ACCESSTOKEN:  ${{ secrets.ACCESSTOKEN }}
-          AccessToken:  ${{ secrets.AccessToken }}
-          accesstoken:  ${{ secrets.accesstoken }}
+          AccessToken1:  ${{ secrets.AccessToken }}
+          accesstoken2:  ${{ secrets.accesstoken }}
                
       - name: Setup Node
         uses: actions/setup-node@v1
@@ -38,8 +38,8 @@ jobs:
         run: | 
           sudo chown -R $USER /home/runner/work/MyLife/
           echo "$ACCESSTOKEN"
-          echo "$AccessToken"
-          echo "$accesstoken"
+          echo "$AccessToken1"
+          echo "$accesstoken2"
           
       - name: Install Dependencies
         run: | 
