@@ -38,6 +38,4 @@ jobs:
           github_token: b47f0e61e1e05b7f67d23f116d790187fafa2a57
         run: | 
           sudo chown -R $USER /home/runner/work/MyLife/
-          yarn install
-          yarn build
-          gh-pages -d build
+          yarn deploy-workflow
