@@ -39,6 +39,7 @@ jobs:
           node-version: '10.x'  
       
       - name: use bat file
-        run: node --version
-        run: npm --version
-        run: echo app-deploy-develop
+        run: | 
+          node --version
+          npm --version
+          echo app-deploy-develop
