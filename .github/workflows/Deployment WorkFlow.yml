@@ -26,11 +26,11 @@ jobs:
           CI: true
           persist-credentials: false
       
-      - name: GitHub Action for committing changes to a repository
-        uses: devops-infra/action-commit-push@0.1
-        with:
-          # Personal Access Token for GitHub for pushing the code
-          github_token: b47f0e61e1e05b7f67d23f116d790187fafa2a57
+      # - name: GitHub Action for committing changes to a repository
+      #   uses: devops-infra/action-commit-push@0.1
+      #   with:
+      #     # Personal Access Token for GitHub for pushing the code
+      #     github_token: b47f0e61e1e05b7f67d23f116d790187fafa2a57
           
       - name: Setup Node
         uses: actions/setup-node@v1
@@ -44,3 +44,5 @@ jobs:
           npm --version
           yarn install
           yarn run deploy
+        with:
+          github_token: b47f0e61e1e05b7f67d23f116d790187fafa2a57
