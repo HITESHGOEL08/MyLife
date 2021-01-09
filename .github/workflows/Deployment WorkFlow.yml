@@ -26,11 +26,8 @@ jobs:
           CI: true
           persist-credentials: false
       
-      # - name: GitHub Action for committing changes to a repository
-      #   uses: devops-infra/action-commit-push@0.1
-      #   with:
-      #     # Personal Access Token for GitHub for pushing the code
-      #     github_token: b47f0e61e1e05b7f67d23f116d790187fafa2a57
+      - name: GitHub Action for committing changes to a repository
+        
           
       - name: Setup Node
         uses: actions/setup-node@v1
@@ -38,9 +35,11 @@ jobs:
           node-version: '12.x'  
       
       - name: Deploy app
+        uses: devops-infra/action-commit-push@0.1
+        with:
+          # Personal Access Token for GitHub for pushing the code
+          github_token: b47f0e61e1e05b7f67d23f116d790187fafa2a57
         run: | 
           sudo chown -R $USER /home/runner/work/MyLife/
           git config --global user.name "HITESHGOEL08"
           yarn run deploy-workflow
-        with:
-          github_token: b47f0e61e1e05b7f67d23f116d790187fafa2a57
