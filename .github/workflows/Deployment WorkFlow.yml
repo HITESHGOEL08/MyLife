@@ -26,6 +26,11 @@ jobs:
           CI: true
           persist-credentials: false
       
+      - name: Give Access
+        run: |
+          git config user.name 'Hitesh Goel'
+          git config user.email 'hiteshgoel426@gmail.com'
+          
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
