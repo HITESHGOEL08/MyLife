@@ -1,15 +1,27 @@
 import React from "react"
-import { HashRouter as Router } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import App from "../screens/mainApp/App"
+import TempApp from "../screens/tempApp/TempApp"
 import "./Routes.scss"
 
 export const Routes = () => {
 
     return (
         <>
-            <Router basename="/" hashType="slash">
+            <Router basename="/" >
                 <div className="app-outer-loop">
-                    <App />
+
+                    <Switch>
+                        <Route exact path="/">
+                            <TempApp />
+                        </Route>
+                        <Route path="/home">
+                            <App />
+                        </Route>
+                        <Route path="*">
+                            <TempApp />
+                        </Route>
+                    </Switch>
                 </div>
             </Router>
         </>
