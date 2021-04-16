@@ -15,7 +15,7 @@ export const Routes = () => {
                         <Route exact path="/">
                             <TempApp />
                         </Route>
-                        <Route path="/home">
+                        <Route exact path="/home">
                             <App />
                         </Route>
                         <Route path="*">
