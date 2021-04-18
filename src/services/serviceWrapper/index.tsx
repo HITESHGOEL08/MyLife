@@ -5,8 +5,8 @@ export class serviceWrapper {
     static getMethod = () => {
         return axios({
             method: "get",
-            baseURL: "https://randomuser.me/",
-            url: "api/",
+            baseURL: "http://localhost:19975/",
+            url: "test",
             headers: {
                 'Content-Type': 'application/json',
             },
