@@ -50,3 +50,7 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
           CLEAN: true
+      
+      - name: Build App
+        run: | 
+          yarn start-backserver

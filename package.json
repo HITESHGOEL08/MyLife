@@ -30,7 +30,7 @@
   "scripts": {
     "start-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "build": "npm-run-all -p start-backserver build-js",
+    "build": "npm-run-all -p build-js",
     "start": "npm-run-all -p start-backserver-js start-js",
     "start-backserver-js": "nodemon server/index.js",
     "start-backserver": "node server/index.js",
