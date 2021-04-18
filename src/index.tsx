@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { googleAnalyticsService } from './services/googleAnalyticsService';
 import { Provider } from "react-redux"
