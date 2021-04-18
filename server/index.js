@@ -1,5 +1,13 @@
 const express = require('express');
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
 const path = require('path');
+var privateKey = fs.readFileSync(path.join(__dirname, "sslcert/server.key"), 'utf8');
+var certificate = fs.readFileSync(path.join(__dirname, "sslcert/server.crt"), 'utf8');
+
+var credentials = { key: privateKey, cert: certificate };
+
 const app = express();
 const cors = require('cors');
 app.use(cors());
@@ -16,5 +24,7 @@ app.get('/test', (req, res) => {
 })
 //Set the port that you want the server to run on
 const port = 19975;
+var httpsServer = https.createServer(credentials, app);
+// httpsServer.listen(port);
 app.listen(port);
 console.log('App is listening on port ' + port);
