@@ -50,11 +50,6 @@ jobs:
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
           CLEAN: true
-      
-      - name: Start Server App
-        run: |
-          $i=2
-          Invoke-Expression ".\startBackendServer.bat.bat"
 
       - name: Start Server App
         run: |
