@@ -8,7 +8,7 @@ function App() {
   const callTestApi = async () => {
     const { data } = await serviceWrapper.getMethod()
     console.log(data);
-    console.log(data && data?.results);
+    // console.log(data && data?.results);
 
 
 
