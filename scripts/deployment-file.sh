@@ -56,6 +56,7 @@ echo .
 echo .
 echo .
 
+rm yarn.lock
 yarn install
 yarn build
 
