@@ -9,6 +9,15 @@ echo .
 echo .
 echo .
 
+echo .
+echo .
+echo .
+echo "***********************************************************"
+date
+echo "***********************************************************"
+echo .
+echo .
+echo .
 
 echo .
 echo .
@@ -57,6 +66,7 @@ echo .
 echo .
 
 rm yarn.lock
+yarn add node-sass
 yarn install
 yarn build
 
@@ -70,3 +80,9 @@ echo .
 echo .
 echo .
 
+echo
+echo
+echo
+echo
+echo
+echo
