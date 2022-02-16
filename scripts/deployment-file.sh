@@ -1,4 +1,17 @@
 #!/bin/sh
+chomod +x /home/MyLife/scripts/deployment-file.sh
+echo .
+echo .
+echo .
+echo "***********************************************************"
+echo date
+echo "***********************************************************"
+echo .
+echo .
+echo .
+
+
+
 echo .
 echo .
 echo .
