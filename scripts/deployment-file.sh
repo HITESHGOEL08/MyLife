@@ -1,5 +1,4 @@
 #!/bin/sh
-chomod +x /home/MyLife/scripts/deployment-file.sh
 echo .
 echo .
 echo .
