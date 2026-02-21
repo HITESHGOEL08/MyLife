@@ -5,6 +5,6 @@ import TempApp from '../TempApp';
 
 test('renders learn react link', () => {
   render(<TempApp />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText(/Site Under Process/i);
   expect(linkElement).toBeInTheDocument();
 });
